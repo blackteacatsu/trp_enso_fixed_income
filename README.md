@@ -2,7 +2,17 @@
 
 A research collaboration between Johns Hopkins University (Whiting School’s Department of Civil & Systems Engineering and Earth & Planetary Sciences) and T. Rowe Price to study how climate variability influences macroeconomic indicators and sovereign debt risk.
 
-### Common issue with dataset
+## Common issue 
+
+### Activate Conda
+This repo is hosted on Rockfish, to start working environment follow the steps below,
+
+```bash
+module load anaconda3
+conda activate <envs name>
+```
+
+### Climate data failed to load
 If xarray gives the following error when reading dataset,
 
 ```bash
@@ -10,6 +20,10 @@ OSError: [Errno -101] NetCDF: HDF error: '/vast/bzaitch1/trp_climate_model_data/
 ```
 
 then try ```os.environ["HDF5_USE_FILE_LOCKING"] = "FALSE" ``` and ```os.environ["NETCDF_HDF5_FILE_LOCKING"] = "FALSE"``` before reading any data to make suare that HDF5 locking is disabled.
+
+### Following best practice during working
+
+*Note total size of the hourly climate data stored under ```/vast/../era5land_1970_2024/``` is 5.4T
 
 ## Citing / Acknowledgments
 
