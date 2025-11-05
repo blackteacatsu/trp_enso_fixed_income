@@ -414,7 +414,9 @@ FodyWeavers.xsd
 *.cab
 *.msi
 
-tmp/*
 *.msix
 *.msm
 *.msp
+
+# Ignore Pickle tmp files
+tmp
