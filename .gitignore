@@ -420,3 +420,5 @@ FodyWeavers.xsd
 
 # Ignore Pickle tmp files
 tmp
+.DS_Store
+*.pkl
